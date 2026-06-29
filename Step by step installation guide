@@ -1,0 +1,17 @@
+Inject Configuration Keys securely into Environment Memory Slots:
+
+Bash
+export GROQ_API_KEY="gsk_3XJenPl4w..." # Paste actual key here
+export NGROK_AUTHTOKEN="3FnIroz2DXE..."  # Paste actual token here
+Boot the Backend Framework:
+
+Bash
+uvicorn main:app --host 127.0.0.1 --port 8000
+Open a new terminal window, inject your environment variables, and boot the Frontend Interface:
+
+Bash
+streamlit run app.py --server.port 8501
+Open a third terminal window and spin up the secure network tunnel:
+
+Bash
+python tunnel.py
